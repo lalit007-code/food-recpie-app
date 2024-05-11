@@ -6,7 +6,9 @@ export function RecipeList({ recipe }: { recipe: any[] }) {
   return (
     <div>
       <div className="p-4 mx-auto lg:max-w-6xl md:max-w-4xl sm:max-w-full">
-        <h2 className="text-4xl font-bold text-gray-800 mb-12">Recipes</h2>
+        <Link href={'/'}>
+          <h2 className="text-4xl font-bold text-gray-800 mb-12">Recipes</h2>
+        </Link>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {recipe.map((recipeItem: any) => (
             <Link href={`/recipe-list/${recipeItem.id}`} key={recipeItem.id}>
@@ -17,8 +19,8 @@ export function RecipeList({ recipe }: { recipe: any[] }) {
                       src={recipeItem.image}
                       alt={recipeItem.name}
                       layout="fill"
-                      objectFit="cover"
-                      objectPosition="top"
+                      // objectFit="cover"
+                      // objectPosition="top"
                       className="rounded-t-md"
                     />
                   </div>
